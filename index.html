@@ -14,7 +14,12 @@
     </head>
     <body>
         <div id="app">
-            {{randomicEmail}}
+            <div>
+                <ul>
+                    <!-- Eseguo un vfor per ogni mail in emailList -->
+                    <li v-for="mail in emailList">{{mail}}</li>
+                </ul>
+            </div>
         </div>
         <!-- Vue - custom script -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
