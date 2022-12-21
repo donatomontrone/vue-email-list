@@ -3,13 +3,19 @@ const { createApp } = Vue
     createApp({
         data() {
             return {
-                message: 'Hello Vue!'
+                randomicEmail: ''
             }
         },
         methods : {
-
+            getRandomEmail(){
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then( (response) => {
+                    this.randomicEmail = response.data.response;
+                })
+            }
         },
-        credated(){
-
+        created(){
+            this.getRandomEmail();
+            console.log(this.randomicEmail);
         }
 }).mount('#app')
