@@ -1,0 +1,219 @@
+main.list{
+
+    margin : 4rem auto;
+    width:500px;
+}
+
+ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+
+
+    .list li, .list a{
+    float:left;
+    height:35px;
+    line-height:35px;
+    position:relative;
+    font-size:15px;
+    margin-bottom: 12px;
+    font-family: 'Raleway', sans-serif;
+    transition: background-color 1.5s ease;
+    }
+    .list a{
+        width: 100%;
+    padding:0 60px 0 12px;
+    background:#42629A;
+    color:#fff;
+    text-decoration:none;
+    -moz-border-radius-bottomright:4px;
+    -webkit-border-bottom-right-radius:4px;
+    border-bottom-right-radius:4px;
+    -moz-border-radius-topright:4px;
+    -webkit-border-top-right-radius:4px;
+    border-top-right-radius:4px;
+    }
+    
+    .list a:before{
+    content:"";
+    float:left;
+    position:absolute;
+    top:0;
+    left:-12px;
+    width:0;
+    height:0;
+    border-color:transparent #0089e0 transparent transparent;
+    border-style:solid;
+    border-width: 18px 12px 18px 0;
+    }
+    
+    .list a:after{
+    content:"";
+    position:absolute;
+    top:15px;
+    left:0;
+    float:left;
+    width:6px;
+    height:6px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    background:#fff;
+    -moz-box-shadow:-1px -1px 2px #004977;
+    -webkit-box-shadow:-1px -1px 2px #004977;
+    box-shadow:-1px -1px 2px #004977;
+    }
+    .list a:hover{
+    background:#555;
+    }
+    
+    .list a:hover:before{
+    border-color:transparent #42629A transparent transparent;
+    }
+
+.container-load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    margin: 0 auto;
+}
+
+.dash {
+    margin: 0 15px;
+    width: 35px;
+    height: 15px;
+    border-radius: 8px;
+    background: #42629A;
+    box-shadow: 0 0 10px 0 #71a2f7;
+}
+
+.one {
+    margin-right: -18px;
+    transform-origin: center left;
+    animation: spin 3s linear infinite;  
+}
+
+.two {
+transform-origin: center right;
+animation: spin2 3s linear infinite;
+animation-delay: .2s;
+}
+
+.three {
+    transform-origin: center right;
+    animation: spin3 3s linear infinite;
+    animation-delay: .3s;
+}
+
+.four {
+    transform-origin: center right;
+    animation: spin4 3s linear infinite;
+    animation-delay: .4s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(360deg);
+    }
+    30% {
+        transform: rotate(370deg);
+    }
+    35% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(0deg);
+    }
+    30% {
+        transform: rotate(-180deg);
+    }
+    35% {
+        transform: rotate(-190deg);
+    }
+    40% {
+        transform: rotate(-180deg);
+    }
+    78% {
+        transform: rotate(-180deg);
+    }
+    95% {
+        transform: rotate(-360deg);
+    }
+    98% {
+        transform: rotate(-370deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes spin3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    27% {
+        transform: rotate(0deg);  
+    }
+    40% {
+        transform: rotate(180deg);
+    }
+    45% {
+        transform: rotate(190deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    62% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(360deg);
+    }
+    80% {
+        transform: rotate(370deg);
+    }
+    85% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin4 {
+    0% {
+        transform: rotate(0deg);
+    }
+    38% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(-360deg);
+    }
+    65% {
+        transform: rotate(-370deg);
+    }
+    75% {
+        transform: rotate(-360deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}

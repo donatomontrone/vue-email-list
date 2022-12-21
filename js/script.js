@@ -24,6 +24,9 @@ const { createApp } = Vue
             },
         },
         created(){
-            this.getMoreEmail(10);
+            setTimeout(() => {
+                this.getMoreEmail(10);
+            }, 5000);
+
         }
 }).mount('#app')

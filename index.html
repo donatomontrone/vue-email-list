@@ -14,15 +14,31 @@
     </head>
     <body>
         <div id="app">
-            <div>
-                <ul v-if="emailList.length === 10">
+            <header>
+                <nav class="navbar bg-secondary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand d-flex align-items-center" href="#">
+                            <img src="./css/img/mail.png" alt="mail logo" width="40" height="40" class="d-inline-block">
+                            <span class="fw-bold fs-1 ps-1 "> Mailing List</span>
+                        
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <main class="list">
+                <ul v-if="emailList.length === 10" class="list-unstyled">
                     <!-- Eseguo un vfor per ogni mail in emailList -->
                     <li v-for="mail in emailList">
-                        {{mail}}
+                        <a href="#">{{mail}}</a>
                     </li>
                 </ul>
-                <p v-else>Loading...</p>
-            </div>
+                <div v-else class="container-load">
+                    <div class="dash one"></div>
+                    <div class="dash two"></div>
+                    <div class="dash three"></div>
+                    <div class="dash four"></div>
+                </div>
+            </main>
         </div>
         <!-- Vue - custom script -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
