@@ -16,7 +16,14 @@ const { createApp } = Vue
                         this.emailList.push(this.randomicEmail);
                 })
             },
+            //Creo una funzione che attraverso il ciclo for itera per n volte la funzione per generare e pushare una mail casuale nell'array
+            getMoreEmail(n){
+                for (let index = 0; index < n; index++) {
+                    this.getRandomEmail();
+                }
+            },
         },
         created(){
+            this.getMoreEmail(10);
         }
 }).mount('#app')
